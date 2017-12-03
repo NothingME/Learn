@@ -16,7 +16,7 @@ import org.apache.zookeeper.data.Stat;
  * User: zhanqian
  * Date: 17/12/2
  * Time: 上午10:16
- * Description: 利用顺序临时节点，实现分布式锁
+ * Description: 利用顺序临时节点，实现分布式锁.
  */
 public class DistributeLock implements Lock, Watcher {
 
