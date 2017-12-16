@@ -7,6 +7,8 @@
     <groupId>person.zhan</groupId>
     <artifactId>demo</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <!-- 不设置这个，子项目无法clean install -->
+    <packaging>pom</packaging>
 
     <!-- Inherit defaults from Spring Boot -->
     <parent>
@@ -14,6 +16,11 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.4.4.RELEASE</version>
     </parent>
+
+    <modules>
+        <module>jpa/jpa-demo</module>
+        <module>zookeeper/distribute-lock</module>
+    </modules>
 
     <!-- Add typical dependencies for a web application -->
     <dependencies>
@@ -29,6 +36,15 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!--JDK版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
