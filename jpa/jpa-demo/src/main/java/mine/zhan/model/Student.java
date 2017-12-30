@@ -80,4 +80,15 @@ public class Student {
     public void setGraduationTime(Date graduationTime) {
         this.graduationTime = graduationTime;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                ", graduationTime=" + graduationTime +
+                '}';
+    }
 }

@@ -35,7 +35,7 @@ public class DistributeLockTest {
 
                         DistributeLock distributeLock = new DistributeLock();
                         distributeLock.lock();
-                        System.out.println("test main >>>>> i: " + (serial++));
+                        System.out.println("zhan main >>>>> i: " + (serial++));
                         distributeLock.unlock();
                     } catch (KeeperException e) {
                         e.printStackTrace();

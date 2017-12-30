@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @EnableAutoConfiguration
 @SpringBootApplication
-@ComponentScan(basePackages = "mine.zhan")
+@ComponentScan(basePackages = {"mine.zhan"})
 public class Application {
 
     public static void main(String[] args) {
